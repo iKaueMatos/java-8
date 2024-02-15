@@ -26,8 +26,6 @@ public class Bike {
         this.model = model;
     }
 
-
-
     @Override
     public String toString() {
         return "Bike{" +

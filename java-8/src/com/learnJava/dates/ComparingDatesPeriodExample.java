@@ -26,14 +26,9 @@ public class ComparingDatesPeriodExample {
         System.out.println("toTotalMonths : " + period2.toTotalMonths());
         System.out.println("getDays : " + period2.getDays());
 
-
-
         Period period3 = Period.between(localDate, localDate1);
         System.out.println("getDays : " +period3.getDays());
         System.out.println("getMonths : " +period3.getMonths());
         System.out.println("getYears : " +period3.getYears());
-
-
-
     }
 }

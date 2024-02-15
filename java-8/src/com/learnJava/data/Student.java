@@ -20,8 +20,7 @@ public class Student {
         this.bike = bike;
     }
 
-    public Student(){
-
+    public Student() {
     }
 
     public Student(String name, int gradeLevel, double gpa, String gender, int noteBooks, List<String> activities) {
@@ -88,7 +87,7 @@ public class Student {
 
     List<String> activities = new ArrayList<>();
 
-    public  List<String> getActivities() {
+    public List<String> getActivities() {
         return this.activities;
     }
 
@@ -96,7 +95,7 @@ public class Student {
         this.activities = activities;
     }
 
-    public void printListOfActivities(){
+    public void printListOfActivities() {
 
         System.out.println("List of Activities are : " + this.activities);
     }
@@ -111,6 +110,5 @@ public class Student {
                 ", activities=" + activities +
                 '}';
     }
-
 
 }
