@@ -14,11 +14,11 @@ import static java.util.stream.Collectors.toSet;
 
 public class StreamsPartitioningExample {
 
-    public static void partitioningBy_1(){
+    public static void partitioningBy_1() {
 
-        Predicate<Student> gpaPredicate = (student) -> student.getGpa()>=3.8;
+        Predicate<Student> gpaPredicate = (student) -> student.getGpa() >= 3.8;
 
-        Map<Boolean,List<Student>> studentMap = StudentDataBase.getAllStudents()
+        Map<Boolean, List<Student>> studentMap = StudentDataBase.getAllStudents()
                 .stream()
                 .collect(partitioningBy(gpaPredicate));
 
@@ -26,26 +26,21 @@ public class StreamsPartitioningExample {
 
     }
 
-    public static void partitioningBy_2(){
+    public static void partitioningBy_2() {
+        Predicate<Student> gpaPredicate = (student) -> student.getGpa() >= 3.8;
 
-        Predicate<Student> gpaPredicate = (student) -> student.getGpa()>=3.8;
-
-        Map<Boolean,Set<Student>> studentMap = StudentDataBase.getAllStudents()
+        Map<Boolean, Set<Student>> studentMap = StudentDataBase.getAllStudents()
                 .stream()
-                .collect(partitioningBy(gpaPredicate,toSet()));
+                .collect(partitioningBy(gpaPredicate, toSet()));
 
         System.out.println("studentMap : " + studentMap);
-
     }
 
-
-    public static void partitioningBy_3(){
-
-        Predicate<Student> gpaPredicate = (student) -> student.getGpa()>=3.8;
-
-        Map<Boolean,Map<String, List<String>>> studentMap = StudentDataBase.getAllStudents()
+    public static void partitioningBy_3() {
+        Predicate<Student> gpaPredicate = (student) -> student.getGpa() >= 3.8;
+        Map<Boolean, Map<String, List<String>>> studentMap = StudentDataBase.getAllStudents()
                 .stream()
-                .collect(partitioningBy(gpaPredicate,toMap(Student::getName,Student::getActivities)));
+                .collect(partitioningBy(gpaPredicate, toMap(Student::getName, Student::getActivities)));
 
         System.out.println("studentMap : " + studentMap);
 

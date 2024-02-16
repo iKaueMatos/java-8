@@ -17,20 +17,21 @@ public class RunnableLambdaExample {
 
         new Thread(runnable).start();
 
-        //Java 8 - Lambda Syntax
+        // Java 8 - Lambda Syntax
 
         // ()->{}
-        //assigning a lambda to a variable.
+        // assigning a lambda to a variable.
 
-        Runnable runnableLambda = () -> {System.out.println("Inside Runnable 2");};
+        Runnable runnableLambda = () -> {
+            System.out.println("Inside Runnable 2");
+        };
 
         Runnable runnableLambdaMultiStatements = () -> {
-                                        System.out.println("Inside Runnable 3");
-                                        System.out.println("Inside Runnable 3");
+            System.out.println("Inside Runnable 3");
+            System.out.println("Inside Runnable 3");
         };
 
         Runnable runnableLambdaSimple = () -> System.out.println("Inside Runnable 3");
-
 
         new Thread(runnableLambda).start();
         new Thread(runnableLambdaMultiStatements).start();
@@ -44,7 +45,5 @@ public class RunnableLambdaExample {
         }).start();
 
         new Thread(() -> System.out.println("Inside Runnable 4")).start();
-
-
     }
 }

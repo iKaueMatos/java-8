@@ -36,15 +36,13 @@ public class ComparatorLambda {
         /**
          * Comparator chaining happens only when the first comparators result is zero.
          */
-        System.out.println("Result of chaining comparator is with equal inputs : "
+        System.out.println("Result of chaining comparator is with equal inputs: "
                 + comparatorLambda1.thenComparing(comparatorLambda1).compare(2, 2));
 
         System.out.println("Result of chaining comparator is with not equal inputs: "
                 + comparatorLambda1.thenComparing(comparatorLambda1).compare(3, 2));
 
         System.out.println(comparatorLambda1.compare(1, 2));
-
         System.out.println("The greatest integer is : " + compareTwoIntegers(comparatorLambda, 1, 2));
-
     }
 }
