@@ -18,8 +18,8 @@ public class ComparatorLambda {
             @Override
             public int compare(Integer o1, Integer o2) {
                 return o1.compareTo(o2); // 0 -> if both are equal
-                                         // 1 -> if o1 > o2
-                                         // -1 -> if o1<o2
+                // 1 -> if o1 > o2
+                // -1 -> if o1<o2
             }
         };
 
@@ -36,11 +36,9 @@ public class ComparatorLambda {
         /**
          * Comparator chaining happens only when the first comparators result is zero.
          */
-        System.out.println("Result of chaining comparator is with equal inputs: "
-                + comparatorLambda1.thenComparing(comparatorLambda1).compare(2, 2));
+        System.out.println("Result of chaining comparator is with equal inputs: " + comparatorLambda1.thenComparing(comparatorLambda1).compare(2, 2));
 
-        System.out.println("Result of chaining comparator is with not equal inputs: "
-                + comparatorLambda1.thenComparing(comparatorLambda1).compare(3, 2));
+        System.out.println("Result of chaining comparator is with not equal inputs: " + comparatorLambda1.thenComparing(comparatorLambda1).compare(3, 2));
 
         System.out.println(comparatorLambda1.compare(1, 2));
         System.out.println("The greatest integer is : " + compareTwoIntegers(comparatorLambda, 1, 2));
